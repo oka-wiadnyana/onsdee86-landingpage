@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@/public/asset/css/fontawesome-all.css";
+import "@/public/asset/css/magnific-popup.css";
+import "@/public/asset/css/styles.css";
+import "@/public/asset/css/swiper.css";
+import Script from "next/script";
+import { open_sans } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +19,34 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={open_sans}>
+      <head>
+        <meta
+          name="description"
+          content="Pavo is a mobile app Tailwind CSS HTML template created to help you present benefits, features and information about mobile apps in order to convince visitors to download them"
+        />
+        <meta name="author" content="Your name" />
+
+        <meta property="og:site_name" content="" />
+        <meta property="og:site" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <title>Pavo Webpage Title</title>
+
+        <link rel="icon" href="/asset/images/favicon.png" />
+      </head>
+      <body data-spy="scroll" data-target=".fixed-top">
+        {children}
+      </body>
+      <Script src="/asset/js/jquery.min.js" />
+
+      <Script src="/asset/js/jquery.easing.min.js" />
+      <Script src="/asset/js/swiper.min.js" />
+      <Script src="/asset/js/jquery.magnific-popup.js" />
+      <Script src="/asset/js/scripts.js" />
     </html>
   );
 }
