@@ -9,7 +9,7 @@ const Header = () => {
     >
       <div className="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
         <div className="mb-16 lg:mt-32 xl:mt-40 xl:mr-12">
-          <h1 className="h1-large mb-5">Team management mobile application</h1>
+          <h1 className="h1-large mb-5">Team management Onsdee86</h1>
           <p className="p-large mb-8">
             Start getting things done together with your team based on
             revolutionary team management features
